@@ -12,5 +12,8 @@ import java.util.List;
  * @author conta
  */
 public interface Reader {
+
     public List<DataAccessObject> read();
+
+    String[] splitBy(String line);
 }

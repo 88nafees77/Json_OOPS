@@ -37,7 +37,7 @@ public class ReadFromFile implements Reader {
             String line = reader.readLine();
             while (line != null) {
                 DataAccessObject accessObject = new DataAccessObject();
-                String[] newLine = line.split(",");
+                String[] newLine = splitBy(line);
                 accessObject.setName(newLine[0]);
                 accessObject.setAge(newLine[1]);
                 accessObject.setQualification(newLine[2]);
@@ -49,6 +49,11 @@ public class ReadFromFile implements Reader {
             e.printStackTrace();
         }
         return list;
+    }
+
+    @Override
+    public String[] splitBy(String line) {
+        return line.split(",");
     }
 
 }
