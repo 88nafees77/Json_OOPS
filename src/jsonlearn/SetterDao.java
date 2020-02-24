@@ -14,14 +14,14 @@ import java.util.List;
  */
 public class SetterDao {
 
-    public List<DataAccessObject> setDao(List<String> line) {
+    public List<DataAccessObject> setDao(List<String[]> line) {
+        ParserLine parserLine = new ParserLine();
         List<DataAccessObject> list = new ArrayList<>();
-        for (String csv : line) {
+        for (String[] csv : line) {
             DataAccessObject accessObject = new DataAccessObject();
-            String string[] = csv.split(",");
-            accessObject.setName(string[0]);
-            accessObject.setAge(string[1]);
-            accessObject.setQualification(string[2]);
+            accessObject.setName(csv[0]);
+            accessObject.setAge(csv[1]);
+            accessObject.setQualification(csv[2]);
             list.add(accessObject);
 
         }

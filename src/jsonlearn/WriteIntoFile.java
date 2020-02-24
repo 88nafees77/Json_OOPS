@@ -32,7 +32,8 @@ public class WriteIntoFile implements Writter {
             BufferedWriter writer = new BufferedWriter(new FileWriter(writerPath));
 
             for (String str : list) {
-                writer.append(str);
+                writer.append(str + "\n");
+
             }
             writer.close();
         } catch (IOException ex) {
