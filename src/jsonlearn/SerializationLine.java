@@ -6,6 +6,8 @@
 package jsonlearn;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.codehaus.jackson.map.ObjectMapper;
 
 /**
@@ -14,13 +16,17 @@ import org.codehaus.jackson.map.ObjectMapper;
  */
 public class SerializationLine {
 
-    public String serialLine(DataAccessObject object) {
+    public List<String> serialLine(List<DataAccessObject> object) {
+        List<String> list = new ArrayList<>();
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            return mapper.writeValueAsString(object);
+            for (DataAccessObject obj : object) {
+                ObjectMapper mapper = new ObjectMapper();
+                list.add(mapper.writeValueAsString(obj));
+            }
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        return null;
+        return list;
     }
+
 }

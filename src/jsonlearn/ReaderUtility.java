@@ -18,7 +18,7 @@ public class ReaderUtility {
     public ReaderUtility(Reader reader) {
         this.read = reader;
     }
-     public List<DataAccessObject> read(){
+     public List<String> read(){
          return read.read();
      }
     

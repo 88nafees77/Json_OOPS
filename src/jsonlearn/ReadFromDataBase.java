@@ -14,13 +14,9 @@ import java.util.List;
 public class ReadFromDataBase implements Reader {
 
     @Override
-    public List<DataAccessObject> read() {
+    public List<String> read() {
         return null;
     }
 
-    @Override
-    public String[] splitBy(String line) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }

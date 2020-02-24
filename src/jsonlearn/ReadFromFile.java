@@ -25,23 +25,18 @@ public class ReadFromFile implements Reader {
         this.path = path;
     }
 
-    public List<DataAccessObject> read() {
+    public List<String> read() {
         return readFromFile();
     }
 
-    private List<DataAccessObject> readFromFile() {
-        List<DataAccessObject> list = new ArrayList<>();
+    private List<String> readFromFile() {
+        List<String> list = new ArrayList<>();
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(new java.io.File(path)));
             String line = reader.readLine();
             while (line != null) {
-                DataAccessObject accessObject = new DataAccessObject();
-                String[] newLine = splitBy(line);
-                accessObject.setName(newLine[0]);
-                accessObject.setAge(newLine[1]);
-                accessObject.setQualification(newLine[2]);
-                list.add(accessObject);
+                list.add(line);
                 line = reader.readLine();
             }
 
@@ -49,11 +44,6 @@ public class ReadFromFile implements Reader {
             e.printStackTrace();
         }
         return list;
-    }
-
-    @Override
-    public String[] splitBy(String line) {
-        return line.split(",");
     }
 
 }

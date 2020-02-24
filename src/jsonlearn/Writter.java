@@ -13,5 +13,5 @@ import java.util.List;
  */
 public interface Writter {
 
-    public void writer(List<DataAccessObject> list);
+    public void writer(List<String> list);
 }

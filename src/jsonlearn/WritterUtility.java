@@ -18,7 +18,7 @@ public class WritterUtility {
     public WritterUtility(Writter writter) {
         this.writter = writter;
     }
-    public void writer(List<DataAccessObject> list){
+    public void writer(List<String> list){
         writter.writer(list);
     } 
 }

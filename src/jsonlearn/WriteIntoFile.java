@@ -27,11 +27,12 @@ public class WriteIntoFile implements Writter {
     }
 
     @Override
-    public void writer(List<DataAccessObject> list) {
+    public void writer(List<String> list) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(writerPath));
-            for (DataAccessObject object : list) {
-                writer.append(sl.serialLine(object));
+
+            for (String str : list) {
+                writer.append(str);
             }
             writer.close();
         } catch (IOException ex) {

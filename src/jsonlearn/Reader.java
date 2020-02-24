@@ -13,7 +13,6 @@ import java.util.List;
  */
 public interface Reader {
 
-    public List<DataAccessObject> read();
+    public List<String> read();
 
-    String[] splitBy(String line);
 }
