@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author conta
  */
-public class ReadFromDataBase implements Reader {
+public class ReadFromDataBase implements IReader {
 
     @Override
     public List<String> read() {

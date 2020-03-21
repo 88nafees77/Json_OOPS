@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author conta
  */
-public interface Reader {
+public interface IReader {
 
     public List<String> read();
 

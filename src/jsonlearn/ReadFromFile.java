@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @author conta
  */
-public class ReadFromFile implements Reader {
+public class ReadFromFile implements IReader {
 
     String path = null;
 

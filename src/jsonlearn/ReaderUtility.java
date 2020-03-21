@@ -13,9 +13,9 @@ import java.util.List;
  */
 public class ReaderUtility {
 
-    Reader read = null;
+    IReader read = null;
 
-    public ReaderUtility(Reader reader) {
+    public ReaderUtility(IReader reader) {
         this.read = reader;
     }
      public List<String> read(){
